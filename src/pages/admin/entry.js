@@ -4,9 +4,11 @@ import 'iview/dist/styles/iview.css'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import {Message} from 'iview'
+import ModalWarning from '@/components/modal_warning/index' // 没有用npm安装的不能直接 import ModalWarning from 'ModalWarning' 这样引入
 
 Vue.prototype.$Message = Message
 Vue.use(VueRouter)
+Vue.use(ModalWarning)
 
 const Index = resolve => require(['@/pages/admin/index'], resolve)
 

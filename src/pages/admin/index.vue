@@ -10,6 +10,8 @@
             </div>
             <Table :columns="columns" :data="users"></Table>
             <Button class='app_main__add' @click='showAdd' type="primary">新增</Button>
+            <warning />
+            <!-- 使用的时候，名称要与Vue.component一致（不区分大小写） -->
         </div>
     </div>
 </template>
