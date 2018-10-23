@@ -1,0 +1,159 @@
+.thin-line {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.thin-line-all (@color) {
+    position: relative;
+    &:before {
+        .thin-line;
+        content: '';
+        border: 1px solid @color;
+    }
+}
+
+.thin-line-v(@color, @left: 0) {
+    position: relative;
+
+    &:before {
+        .thin-line;
+        content: '';
+        left: @left;
+        border-top: 1px solid @color;
+        border-bottom: 1px solid @color;
+    }
+}
+
+.thin-line-top(@color, @left: 0) {
+    position: relative;
+
+    &:before {
+        .thin-line;
+        content: '';
+        left: @left;
+        border-top: 1px solid @color;
+    }
+}
+
+.thin-line-bottom(@color, @left: 0, @style: solid) {
+    position: relative;
+
+    &:after {
+        .thin-line;
+        content: '';
+        left: @left;
+        border-bottom: 1px @style @color;
+    }
+}
+
+.thin-line-right(@color, @top: 0) {
+    position: relative;
+
+    &:after {
+        .thin-line;
+        content: '';
+        top: @top;
+        border-right: 1px solid @color;
+    }
+}
+
+.thin-line-left(@color, @top: 0) {
+    position: relative;
+
+    &:after {
+        .thin-line;
+        content: '';
+        top: @top;
+        border-left: 1px solid @color;
+    }
+}
+
+.multi-line(@line: 2) {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+
+.img-bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.line-camp(@line) {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+}
+
+.mt-8 {margin-top: 0.4rem;}
+.mt-10 {margin-top: 0.5rem;}
+.mt-16 {margin-top: 0.8rem;}
+.mt-24 {margin-top: 1.2rem;}
+.mb-8 {margin-bottom: 0.4rem;}
+.mb-10 {margin-bottom: 0.5rem;}
+.mb-16 {margin-bottom: 0.8rem;}
+.mb-24 {margin-bottom: 1.2rem;}
+.mv-8 {margin: 0.4rem 0;}
+.mv-10 {margin: 0.5rem 0;}
+.mv-16 {margin: 0.8rem 0;}
+.mv-24 {margin: 1.2rem 0;}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+
+// color
+.success-text-color{
+    color:#19BE6B!important;
+}
+.warning-text-color{
+    color:#FF6600!important;
+}
+.error-text-color{
+    color:#ED3F14!important;
+}
+.success-color{
+    background: #19BE6B!important;;
+}
+.warning-color{
+    background: #ffeee5!important;;
+}
+.error-color{
+    background: #ED3F14!important;;
+}
+
+.grey-color {
+    color: #9EA7B4!important;
+}
+
+.ib {
+    display: inline-block;
+}
+
+.one-line-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
