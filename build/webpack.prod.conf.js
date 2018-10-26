@@ -60,7 +60,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     //     : { safe: true }
     // }),
     new MultiPageWebpackPlugin({
-      output: config.distPath + '/[entryName].html',
+      output: config.build.distPath + '/[entryName].html',
       commonChunks: ['vendor', 'manifest'],
       minify: true
     }),
